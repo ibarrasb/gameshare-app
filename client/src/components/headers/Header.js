@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {GlobalState} from '../../GlobalState'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
+import './header.css'
 
 function Header() {
     const state = useContext(GlobalState)
@@ -15,29 +16,22 @@ function Header() {
 
     const loggedRouter = () => {
         return(
-            <div>
-            <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
+            <div className="container">
+            <div className="dv1">Gameshare</div>
+            <div className="dv2"><Link to="/" onClick={logoutUser}>Logout</Link></div>
             </div>
         )
     }
 
     return (
-    <header>
-
-        <div className='logo'>
-            <h1>
-                    Gameshare
-            </h1>
-        </div>
-
-        <ul>
-                        
+    <div>
+             
             {
                 isLogged ? loggedRouter() : ''
             } 
 
-        </ul>   
-    </header>
+       
+    </div>
     );
 }
 

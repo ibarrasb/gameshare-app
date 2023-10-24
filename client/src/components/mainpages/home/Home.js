@@ -6,10 +6,20 @@ function Home() {
     const [isLogged] = state.UserAPI.isLogged
     const [name] = state.UserAPI.name
     const [consoles] = state.UserAPI.consoles
+
+    const loggedRouter = () => {
+        return(
+            <div className="container">
+            <div>Welcome</div>
+            <div>{name}</div>
+          </div>
+          
+        )
+    }
     
     return (
         <div>
-            <h1> {isLogged ? `Welcome ${name}` : 'Home'}</h1>
+            <h1> {isLogged ? loggedRouter() : ''}</h1>
             <div>
                 {consoles.map((console, index) => (
                     <h1 key={index}>{console}</h1>

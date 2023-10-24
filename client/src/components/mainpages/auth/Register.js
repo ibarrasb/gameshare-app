@@ -41,6 +41,7 @@ function Register() {
     return (
         <div className="login-page">
             <form onSubmit={registerSubmit}>
+            <h1 className='main-title'>Gameshare</h1>
                 <h2>Register</h2>
                 <input
                     type="text"
@@ -71,9 +72,10 @@ function Register() {
                 />
 
                 {/* Checkboxes for selecting consoles */}
-                <div>
-                    <label>
+                <div className='check-box'>
+                    <label className='check-name'>
                         <input
+                        className='check-name'
                             type="checkbox"
                             name="consoles"
                             value="Xbox"
@@ -83,8 +85,9 @@ function Register() {
                         Xbox
                     </label>
 
-                    <label>
+                    <label className='check-name'>
                         <input
+                        
                             type="checkbox"
                             name="consoles"
                             value="PlayStation"
@@ -94,8 +97,9 @@ function Register() {
                         PlayStation
                     </label>
 
-                    <label>
+                    <label className='check-name'>
                         <input
+                        
                             type="checkbox"
                             name="consoles"
                             value="PlayStation"
